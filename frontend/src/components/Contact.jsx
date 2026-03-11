@@ -48,9 +48,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    const API_URL = import.meta.env.PROD 
-      ? 'https://portfolio-backend-hfjd.onrender.com/send-email' 
-      : 'http://localhost:5001/send-email';
+    const API_URL = 'https://portfolio-backend-hfjd.onrender.com/send-email';
 
     try {
       const response = await fetch(API_URL, {
