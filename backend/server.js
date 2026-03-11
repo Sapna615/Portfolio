@@ -8,9 +8,8 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 const corsOptions = {
-  origin: '*', // Temporarily allow all for debugging
+  origin: '*', 
   methods: 'GET,POST',
-  credentials: true,
 };
 app.use(cors(corsOptions));
 app.use(express.json());
