@@ -21,17 +21,19 @@ app.get('/', (req, res) => {
 
 // Nodemailer Transporter
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // Use SSL
   auth: {
-    user: process.env.EMAIL_USER, // Your Gmail address from .env
-    pass: process.env.EMAIL_PASS, // Your Gmail App Password from .env
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
 // Test transporter connection
 transporter.verify((error, success) => {
   if (error) {
-    console.error('Nodemailer transporter error:', error);
+    console.error('Nodemailer verification failed:', error.message);
   } else {
     console.log('Nodemailer is ready to send emails');
   }
@@ -40,6 +42,13 @@ transporter.verify((error, success) => {
 // API Endpoint for sending emails
 app.post('/send-email', (req, res) => {
   const { user_name, user_email, subject, message } = req.body;
+
+  console.log('Received contact form submission from:', user_email);
+
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.error('Missing environment variables: EMAIL_USER or EMAIL_PASS');
+    return res.status(500).json({ error: 'Server configuration error.' });
+  }
 
   if (!user_name || !user_email || !subject || !message) {
     return res.status(400).json({ error: 'All fields are required.' });
