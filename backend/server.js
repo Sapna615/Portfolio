@@ -46,10 +46,11 @@ app.post('/send-email', (req, res) => {
   }
 
   const mailOptions = {
-    from: `"${user_name}" <${process.env.EMAIL_USER}>`,
-    to: process.env.EMAIL_USER, // The email address that will receive the message
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_USER, 
     replyTo: user_email,
     subject: `Portfolio Contact: ${subject}`,
+    text: `Name: ${user_name}\nEmail: ${user_email}\nSubject: ${subject}\n\nMessage:\n${message}`,
     html: `
       <p><strong>Name:</strong> ${user_name}</p>
       <p><strong>Email:</strong> ${user_email}</p>
