@@ -18,7 +18,7 @@ const Internship = () => {
       location: 'Remote/India',
       period: 'Internship',
       github: 'https://github.com/Sapna615', // Placeholder for Internship Repo
-      certificate: '#', // Placeholder for Internship Certificate
+      certificate:"https://drive.google.com/file/d/158t6yWhsjENRNY8gSczACQOmBCWiCAsj/view", // Placeholder for Internship Certificate
     },
   ];
 

@@ -8,15 +8,15 @@ const Projects = () => {
       title: 'Quiz Based App Game',
       description: 'A responsive React interface for quizzes with question randomization, countdown timers, and automatic score calculation. Integrated REST APIs for user authentication and leaderboard data.',
       tech: ['ReactJS', 'NodeJS', 'MongoDB', 'API'],
-      github: 'https://github.com/Sapna615/Quiz-App', // Replace with your actual repo link
-      link: '#', // Replace with your actual demo link
+      github: 'https://github.com/Sapna615/QuizApp', // Replace with your actual repo link
+      link: "#", // Replace with your actual demo link
       date: 'Jul’ 25 – Aug’ 25',
     },
     {
       title: 'Travel and Tourism',
       description: 'An engaging tourism platform with destination discovery features, interactive UI elements, and a MySQL database for managing user profiles and booking records.',
       tech: ['HTML', 'Tailwind CSS', 'JavaScript', 'PHP'],
-      github: 'https://github.com/Sapna615/Travel-Tourism', // Replace with your actual repo link
+      github: 'https://github.com/Sapna615/Tourism', // Replace with your actual repo link
       link: '#', // Replace with your actual demo link
       date: 'Apr’ 25',
     },
@@ -24,7 +24,7 @@ const Projects = () => {
       title: 'Online Pet Adoption & Welfare',
       description: 'Designed user-friendly pet adoption interfaces with informational pet-care modules and donation options. Enhanced with JavaScript-based dynamic elements and responsive forms.',
       tech: ['HTML', 'CSS', 'JavaScript'],
-      github: 'https://github.com/Sapna615/Pet-Adoption', // Replace with your actual repo link
+      github: 'https://github.com/Sapna615/Adoption', // Replace with your actual repo link
       link: '#', // Replace with your actual demo link
       date: 'Dec’ 23',
     },

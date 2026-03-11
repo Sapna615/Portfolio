@@ -8,19 +8,19 @@ const Certificates = () => {
       title: 'Cloud Computing',
       issuer: 'NPTEL (IIT Kharagpur)',
       date: 'Apr’ 25',
-      link: '#', // Add your certificate URL here
+      link: "https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs11/Course/NPTEL25CS11S143730186804250336.pdf", // Add your certificate URL here
     },
     {
       title: 'Object Oriented Programming',
       issuer: 'Neo',
       date: 'Dec’ 24',
-      link: '#', // Add your certificate URL here
+      link: "https://lpucolab438.examly.io/certificate/U2FsdGVkX19psza%2BLIHwUbK1T%2BwJpVgOSXxlDCjiQLk%3D", // Add your certificate URL here
     },
     {
       title: 'Data Structures and Algorithms using C++',
       issuer: 'Training',
       date: 'Jul’ 24',
-      link: '#', // Add your certificate URL here
+      link: "https://drive.google.com/file/d/1TqMcBisSXCxQiP4uQU6mHf5oJYtShEUu/view", // Add your certificate URL here
     },
   ];
 
