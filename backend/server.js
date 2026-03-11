@@ -8,7 +8,11 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 const corsOptions = {
-  origin: ['http://localhost:5173', 'http://localhost:5174', 'https://your-portfolio-frontend.vercel.app'], // Replace with your Vercel URL after deployment
+  origin: [
+    'http://localhost:5173', 
+    'http://localhost:5174', 
+    'https://portfolio-sapna615s-projects.vercel.app'
+  ],
   methods: 'GET,POST',
   credentials: true,
 };

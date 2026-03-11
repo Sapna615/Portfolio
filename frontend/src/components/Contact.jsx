@@ -49,7 +49,7 @@ const Contact = () => {
     setLoading(true);
 
     const API_URL = import.meta.env.PROD 
-      ? 'https://your-portfolio-backend.onrender.com/send-email' // Replace with your Render URL after deployment
+      ? 'https://sapna-portfolio-backend.onrender.com/send-email' 
       : 'http://localhost:5001/send-email';
 
     try {
