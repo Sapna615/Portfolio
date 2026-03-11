@@ -233,13 +233,22 @@ const Contact = () => {
                     className="w-full bg-slate-50/50 border border-slate-100 p-5 rounded-2xl text-slate-900 focus:bg-white focus:border-indigo-400 focus:shadow-xl focus:shadow-indigo-50 outline-none transition-all font-bold placeholder:text-slate-300 resize-none"
                   ></textarea>
                 </div>
-                <button
-                  type="submit"
+                <button 
+                  type="submit" 
                   disabled={loading}
-                  className={`btn-primary w-full flex items-center justify-center gap-3 py-5 rounded-2xl text-lg ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className="btn-primary w-full py-5 rounded-3xl flex items-center justify-center gap-4 group disabled:opacity-70 disabled:cursor-not-allowed text-lg"
                 >
-                  {loading ? 'Sending...' : 'Send Message'} 
-                  {!loading && <Send size={22} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
+                  {loading ? (
+                    <div className="flex items-center gap-3">
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <span>Sending...</span>
+                    </div>
+                  ) : (
+                    <>
+                      Send Message 
+                      <Send size={22} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </>
+                  )}
                 </button>
               </form>
             </div>
