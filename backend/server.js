@@ -21,13 +21,14 @@ app.get('/', (req, res) => {
 
 // Nodemailer Transporter
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false, // Use STARTTLS (more compatible with cloud hosting)
+  service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
+  tls: {
+    rejectUnauthorized: false // Helps with some cloud hosting network restrictions
+  }
 });
 
 // Test transporter connection
