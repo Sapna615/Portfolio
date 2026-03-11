@@ -21,7 +21,9 @@ app.get('/', (req, res) => {
 
 // Nodemailer Transporter
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // Use STARTTLS (more compatible with cloud hosting)
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
