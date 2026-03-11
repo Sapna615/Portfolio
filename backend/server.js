@@ -11,7 +11,7 @@ const corsOptions = {
   origin: [
     'http://localhost:5173', 
     'http://localhost:5174', 
-    'https://portfolio-sapna615s-projects.vercel.app'
+    /\.vercel\.app$/ // This allows all Vercel deployment URLs
   ],
   methods: 'GET,POST',
   credentials: true,
