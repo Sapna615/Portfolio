@@ -8,11 +8,7 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 const corsOptions = {
-  origin: [
-    'http://localhost:5173', 
-    'http://localhost:5174', 
-    /\.vercel\.app$/ // This allows all Vercel deployment URLs
-  ],
+  origin: '*', // Temporarily allow all for debugging
   methods: 'GET,POST',
   credentials: true,
 };
