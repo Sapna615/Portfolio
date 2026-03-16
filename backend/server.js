@@ -26,10 +26,9 @@ const transporter = nodemailer.createTransport({
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
-  // Force IPv4
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false
+  tls: {
+    rejectUnauthorized: false
+  }
 });
 
 // Test transporter connection
@@ -42,7 +41,7 @@ transporter.verify((error, success) => {
 });
 
 // API Endpoint for sending emails
-app.post('/send-email', (req, res) => {
+app.post('/send-email', async (req, res) => {
   const { user_name, user_email, subject, message } = req.body;
 
   console.log('Received contact form submission from:', user_email);
@@ -71,14 +70,14 @@ app.post('/send-email', (req, res) => {
     `,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error('Error sending email:', error);
-      return res.status(500).json({ error: 'Failed to send message. Please try again later.' });
-    }
+  try {
+    const info = await transporter.sendMail(mailOptions);
     console.log('Message sent: %s', info.messageId);
     res.status(200).json({ success: 'Message sent successfully!' });
-  });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ error: 'Failed to send message. Please try again later.' });
+  }
 });
 
 // Start the server
