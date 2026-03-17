@@ -12,5 +12,11 @@
   "installCommand": "npm install",
   "buildCommand": "npx vite build",
   "outputDirectory": "dist",
-  "framework": "vite"
+  "framework": "vite",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
