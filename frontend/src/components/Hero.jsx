@@ -40,11 +40,11 @@ const Hero = () => {
                 View My Projects
               </button>
             </Link>
-            <a href="/sapnacv.pdf" target="_blank" rel="noopener noreferrer">
+            {/* <a href="/sapnacv.pdf" target="_blank" rel="noopener noreferrer">
               <button className="btn-secondary flex items-center gap-2 text-indigo-600 border-indigo-100 hover:bg-indigo-50">
                 <FileDown size={20} /> View CV
               </button>
-            </a>
+            </a> */}
           </div>
 
           <div className="mt-20 flex items-center justify-center space-x-10">

@@ -41,9 +41,20 @@ const About = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square card-3d overflow-hidden p-12 flex items-center justify-center animate-float">
-               <div className="text-indigo-600/10 font-black text-[200px] select-none absolute -z-10">SR</div>
-               <div className="text-slate-900 font-black text-9xl relative z-10 drop-shadow-2xl">SR</div>
+            <div className="w-64 h-64 md:w-90 md:h-130 card-3d overflow-hidden p-2 flex items-center justify-center mx-auto">
+               <img 
+                 src="/formaldress.jpeg" 
+                 alt="Sapna Rai"
+                 className="w-full h-full object-cover rounded-full"
+                 onError={(e) => {
+                   e.target.style.display = 'none';
+                   e.target.nextElementSibling.style.display = 'flex';
+                 }}
+               />
+               <div className="w-full h-full flex items-center justify-center" style={{display: 'none'}}>
+                 <div className="text-indigo-600/10 font-black text-[200px] select-none absolute -z-10">SR</div>
+                 <div className="text-slate-900 font-black text-9xl relative z-10 drop-shadow-2xl">SR</div>
+               </div>
             </div>
             {/* Decorative Elements */}
             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-indigo-100 rounded-full blur-3xl -z-10"></div>

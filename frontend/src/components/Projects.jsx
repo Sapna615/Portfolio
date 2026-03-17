@@ -9,24 +9,26 @@ const Projects = () => {
       description: 'A responsive React interface for quizzes with question randomization, countdown timers, and automatic score calculation. Integrated REST APIs for user authentication and leaderboard data.',
       tech: ['ReactJS', 'NodeJS', 'MongoDB', 'API'],
       github: 'https://github.com/Sapna615/QuizApp', // Replace with your actual repo link
-      link: "#", // Replace with your actual demo link
+      // link: "#",
       date: 'Jul’ 25 – Aug’ 25',
+      image: '/quiz.png', // Add your quiz app image path
     },
     {
       title: 'Travel and Tourism',
       description: 'An engaging tourism platform with destination discovery features, interactive UI elements, and a MySQL database for managing user profiles and booking records.',
       tech: ['HTML', 'Tailwind CSS', 'JavaScript', 'PHP'],
       github: 'https://github.com/Sapna615/Tourism', // Replace with your actual repo link
-      link: '#', // Replace with your actual demo link
+      // link: '#', 
       date: 'Apr’ 25',
+      image: 'https://t4.ftcdn.net/jpg/00/65/48/25/360_F_65482539_C0ZozE5gUjCafz7Xq98WB4dW6LAhqKfs.jpg', // Add your tourism project image path
     },
     {
       title: 'Online Pet Adoption & Welfare',
       description: 'Designed user-friendly pet adoption interfaces with informational pet-care modules and donation options. Enhanced with JavaScript-based dynamic elements and responsive forms.',
       tech: ['HTML', 'CSS', 'JavaScript'],
       github: 'https://github.com/Sapna615/Adoption', // Replace with your actual repo link
-      link: '#', // Replace with your actual demo link
       date: 'Dec’ 23',
+      image: '/pet.png', // Add your pet adoption image path
     },
   ];
 
@@ -60,8 +62,17 @@ const Projects = () => {
               viewport={{ once: true }}
               className="card-3d group flex flex-col h-full"
             >
-              <div className="aspect-[16/10] bg-slate-50 rounded-t-3xl p-10 flex items-center justify-center relative overflow-hidden group-hover:bg-white transition-all duration-500">
-                <Code size={70} className="text-slate-200 group-hover:scale-110 group-hover:text-indigo-100 transition-all duration-700 ease-out" />
+              <div className="aspect-[16/10] bg-slate-50 rounded-t-3xl overflow-hidden relative group-hover:bg-white transition-all duration-500">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-out"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.display = 'flex';
+                  }}
+                />
+                <Code size={70} className="absolute inset-0 m-auto text-slate-200 group-hover:scale-110 group-hover:text-indigo-100 transition-all duration-700 ease-out" style={{display: 'none'}} />
                 <div className="absolute top-6 right-6 flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm border border-slate-100">
                   <Calendar size={14} className="text-indigo-500" />
                   <span className="text-slate-600 text-[10px] font-bold uppercase tracking-wider">
@@ -88,9 +99,9 @@ const Projects = () => {
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-600 transition-all flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
                     <Github size={20} /> Code
                   </a>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-600 transition-all flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
+                  {/* <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-600 transition-all flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
                     <ExternalLink size={20} /> Demo
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </motion.div>

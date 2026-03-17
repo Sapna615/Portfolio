@@ -6,8 +6,8 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    user_name: '',
-    user_email: '',
+    name: '',
+    email: '',
     subject: '',
     message: '',
   });
@@ -48,28 +48,28 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    const API_URL = 'https://portfolio-backend-hfjd.onrender.com/send-email';
+    // Using Formspree for frontend-only contact form
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/your-form-id'; // You'll get this after creating Formspree account
 
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
-
       if (response.ok) {
         setShowModal(true);
-        setFormData({ user_name: '', user_email: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        throw new Error(result.error || 'Something went wrong.');
+        throw new Error('Failed to submit form. Please try again.');
       }
     } catch (error) {
-      alert(error.message || 'Failed to send message. Please try again.');
       console.error('Form Submission Error:', error);
+      alert('Failed to send message. Please try again later.');
     } finally {
       setLoading(false);
     }
@@ -182,13 +182,13 @@ const Contact = () => {
             <div className="card-3d p-10 md:p-16 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-indigo-50/50 rounded-bl-full -z-10"></div>
               
-              <form onSubmit={handleSubmit} className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-8" method="POST" action="https://formspree.io/f/your-form-id">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div className="space-y-3">
                     <label className="text-xs uppercase tracking-widest font-black text-slate-400 ml-2">Name</label>
                     <input
                       type="text"
-                      name="user_name"
+                      name="name"
                       required
                       value={formData.user_name}
                       onChange={handleChange}
@@ -200,7 +200,7 @@ const Contact = () => {
                     <label className="text-xs uppercase tracking-widest font-black text-slate-400 ml-2">Email</label>
                     <input
                       type="email"
-                      name="user_email"
+                      name="email"
                       required
                       value={formData.user_email}
                       onChange={handleChange}

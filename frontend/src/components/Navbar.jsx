@@ -22,7 +22,7 @@ const Navbar = () => {
     { name: 'Internship', to: 'internship' },
     { name: 'Certificates', to: 'certificates' },
     { name: 'Contact', to: 'contact' },
-    { name: 'Resume', to: '/sapnacv.pdf', isExternal: true },
+    { name: 'Resume', to: '/sapna cv.pdf', isExternal: true },
   ];
 
   return (

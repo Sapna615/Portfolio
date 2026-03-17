@@ -17,7 +17,7 @@ const Internship = () => {
       tech: ['ReactJS', 'NodeJS', 'JAVA', 'REST API'],
       location: 'Remote/India',
       period: 'Internship',
-      github: 'https://github.com/Sapna615', // Placeholder for Internship Repo
+      // github: 'https://github.com/Sapna615',
       certificate:"https://drive.google.com/file/d/158t6yWhsjENRNY8gSczACQOmBCWiCAsj/view", // Placeholder for Internship Certificate
     },
   ];
