@@ -48,8 +48,9 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Using Formspree for frontend-only contact form
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/your-form-id'; // You'll get this after creating Formspree account
+    // PASTE YOUR FORMSPREE ENDPOINT HERE:
+    // Example: const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xyz123';
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mpqyoqvq'; // ← REPLACE THIS LINE
 
     try {
       const response = await fetch(FORMSPREE_ENDPOINT, {
@@ -69,7 +70,7 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Form Submission Error:', error);
-      alert('Failed to send message. Please try again later.');
+      alert('Failed to send message. Please try again.');
     } finally {
       setLoading(false);
     }
