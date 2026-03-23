@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: 'Quiz Based App Game',
       description: 'A responsive React interface for quizzes with question randomization, countdown timers, and automatic score calculation. Integrated REST APIs for user authentication and leaderboard data.',
-      tech: ['ReactJS', 'NodeJS', 'MongoDB', 'API'],
+      tech: ['HTML', 'CSS', 'JavaScript', 'ReactJS', 'NodeJS', 'MongoDB', 'API'],
       github: 'https://github.com/Sapna615/QuizApp', // Replace with your actual repo link
       // link: "#",
       date: 'Jul’ 25 – Aug’ 25',

@@ -17,10 +17,10 @@ const Certificates = () => {
       link: "https://lpucolab438.examly.io/certificate/U2FsdGVkX19psza%2BLIHwUbK1T%2BwJpVgOSXxlDCjiQLk%3D", // Add your certificate URL here
     },
     {
-      title: 'Data Structures and Algorithms using C++',
-      issuer: 'Training',
-      date: 'Jul’ 24',
-      link: "https://drive.google.com/file/d/1TqMcBisSXCxQiP4uQU6mHf5oJYtShEUu/view", // Add your certificate URL here
+      title: 'Legacy Responsive Web Design V8 ',
+      issuer: 'freeCodeCamp',
+      date: 'Nov’ 23',
+      link: "https://drive.google.com/file/d/1pkG-UaksUxe2rXs9MdDBFFtzXQO9UDJA/view", // Add your certificate URL here
     },
   ];
 

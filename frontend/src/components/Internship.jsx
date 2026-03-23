@@ -14,10 +14,10 @@ const Internship = () => {
         'Built backend APIs to handle student data, course information, and fee management between the frontend and database.',
         'Managed structured data storage for student profiles, course records, and fee details to ensure smooth system operation.',
       ],
-      tech: ['ReactJS', 'NodeJS', 'JAVA', 'REST API'],
+      tech: ['HTML', 'CSS', 'JavaScript', 'ReactJS', 'JAVA', 'REST API'],
       location: 'Remote/India',
       period: 'Internship',
-      // github: 'https://github.com/Sapna615',
+      github: 'https://github.com/Sapna615/College-Management-System',
       certificate:"https://drive.google.com/file/d/158t6yWhsjENRNY8gSczACQOmBCWiCAsj/view", // Placeholder for Internship Certificate
     },
   ];
