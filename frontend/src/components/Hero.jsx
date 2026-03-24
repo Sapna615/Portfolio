@@ -25,7 +25,7 @@ const Hero = () => {
             SAPNA <span className="text-indigo-600">RAI</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl md:text-2xl text-slate-700 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
             Crafting high-performance digital experiences with modern technology and elegant design.
           </p>
 

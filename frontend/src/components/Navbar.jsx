@@ -18,6 +18,8 @@ const Navbar = () => {
     { name: 'Home', to: 'home' },
     { name: 'About', to: 'about' },
     { name: 'Skills', to: 'skills' },
+    { name: 'Education', to: 'education' },
+    { name: 'Training', to: 'training' },
     { name: 'Projects', to: 'projects' },
     { name: 'Internship', to: 'internship' },
     { name: 'Certificates', to: 'certificates' },
@@ -26,7 +28,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md py-4 border-b border-slate-200' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md py-4 border-b border-slate-200' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="home" smooth={true} className="text-xl font-bold tracking-tighter cursor-pointer text-slate-900">
           SAPNA<span className="text-indigo-600">RAI</span>

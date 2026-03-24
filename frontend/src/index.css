@@ -9,7 +9,7 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-800 antialiased;
+    @apply bg-white text-slate-900 antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
   
@@ -38,7 +38,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-50;
+  @apply bg-white;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -54,7 +54,7 @@ html {
 }
 
 .btn-primary {
-  @apply bg-indigo-600 text-white px-8 py-3 rounded-2xl font-bold shadow-lg shadow-indigo-200 hover:bg-indigo-700 hover:-translate-y-1 transition-all active:scale-95;
+  @apply bg-indigo-600 text-white px-8 py-3 rounded-2xl font-bold shadow-lg shadow-indigo-200/50 hover:bg-indigo-700 hover:-translate-y-1 transition-all active:scale-95;
 }
 
 .btn-secondary {
@@ -63,7 +63,7 @@ html {
 
 /* 3D Card Effect */
 .card-3d {
-  @apply bg-white/70 backdrop-blur-md border border-white/40 rounded-3xl shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-indigo-100/50 transition-all duration-500;
+  @apply bg-white border border-slate-200 rounded-3xl shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-indigo-100/50 transition-all duration-500;
 }
 
 /* Floating Animation */

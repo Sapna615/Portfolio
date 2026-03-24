@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Background = () => {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden bg-slate-50">
+    <div className="fixed inset-0 -z-10 overflow-hidden bg-white">
       {/* Light Color Pop Balls (3D Blobs) */}
       <motion.div
         animate={{
