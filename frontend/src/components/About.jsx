@@ -43,7 +43,7 @@ const About = () => {
           >
             <div className="w-64 h-64 md:w-90 md:h-130 card-3d overflow-hidden p-2 flex items-center justify-center mx-auto">
                <img 
-                 src="/formaldress.jpeg" 
+                 src="/linkedin.jpeg" 
                  alt="Sapna Rai"
                  className="w-full h-full object-cover rounded-full"
                  onError={(e) => {
